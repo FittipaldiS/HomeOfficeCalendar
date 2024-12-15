@@ -1,0 +1,9 @@
+C:\Users\Fitti\OneDrive\Desktop\HomeOffice.Calendar.pdb
+C:\Users\Fitti\OneDrive\Desktop\D3DCompiler_47_cor3.dll
+C:\Users\Fitti\OneDrive\Desktop\PenImc_cor3.dll
+C:\Users\Fitti\OneDrive\Desktop\PresentationNative_cor3.dll
+C:\Users\Fitti\OneDrive\Desktop\vcruntime140_cor3.dll
+C:\Users\Fitti\OneDrive\Desktop\wpfgfx_cor3.dll
+C:\Users\Fitti\OneDrive\Desktop\e_sqlite3.dll
+C:\Users\Fitti\OneDrive\Desktop\MVVM.Helper.pdb
+C:\Users\Fitti\OneDrive\Desktop\HomeOffice.Calendar.exe

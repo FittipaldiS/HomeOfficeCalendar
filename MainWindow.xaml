@@ -1,0 +1,373 @@
+﻿<Window x:Class="HomeOffice.Calendar.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HomeOffice.Calendar" 
+        xmlns:viewmodels="clr-namespace:HomeOffice.Calendar.ViewModels" 
+        xmlns:local1="clr-namespace:MVVM.Helper.ConverterHelper"
+        mc:Ignorable="d"
+        Title="HomeOffice Callendar" Height="420" Width="800"
+        MaxHeight="420"
+        MaxWidth="800"
+        Icon="favicon.ico">
+
+
+
+    <Grid Margin="10"
+          Background="WhiteSmoke">
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+
+        <!-- Datum-->
+        <Grid Grid.Row="0"
+              Grid.ColumnSpan="3">
+
+            <Border Background="GhostWhite" BorderBrush="Gainsboro" BorderThickness="1">
+                <Label Content="Wählen Sie bitte ein Datum" 
+                       HorizontalAlignment="Center"
+                       FontSize="15"
+                       VerticalAlignment="Center">
+                </Label>
+            </Border>
+
+        </Grid>
+
+        <!-- Urlaub-->
+        <Grid Grid.Row="0"
+              Grid.Column="3">
+
+            <Border Background="GhostWhite" BorderBrush="Gainsboro" BorderThickness="1">
+                <Label Content="Urlaub" 
+                       HorizontalAlignment="Center"
+                       FontSize="15"
+                       VerticalAlignment="Center">
+                </Label>
+            </Border>
+
+        </Grid>
+
+        <!-- Krankentage-->
+        <Grid Grid.Row="0"
+              Grid.Column="4">
+
+            <Border Background="GhostWhite" BorderBrush="Gainsboro" BorderThickness="1">
+                <Label Content="Krankentage" 
+                       HorizontalAlignment="Center"
+                       FontSize="15"
+                       VerticalAlignment="Center">
+                </Label>
+            </Border>
+
+        </Grid>
+
+        <!-- Feiertag-->
+        <Grid Grid.Row="0"
+              Grid.Column="5">
+
+            <Border Background="GhostWhite" BorderBrush="Gainsboro" BorderThickness="1">
+                <Label Content="Feiertag" 
+                       HorizontalAlignment="Center"
+                       FontSize="15"
+                       VerticalAlignment="Center">
+                </Label>
+            </Border>
+
+        </Grid>
+
+        <!-- Krankentage-->
+        <Grid Grid.Row="0"
+              Grid.Column="6"
+              Grid.ColumnSpan="7">
+
+            <Border Background="GhostWhite" BorderBrush="Gainsboro" BorderThickness="1">
+                <Label Content="Home Office porzent %" 
+                   HorizontalAlignment="Left"
+                   FontSize="15"
+                   VerticalAlignment="Center">
+                </Label>
+            </Border>
+
+        </Grid>
+
+        <!--CalendarPick-->
+        <Grid Grid.Column="0"
+              Grid.Row="1"
+              Grid.ColumnSpan="3">
+
+            <!--A DatePicker that has March 23, 2009 selected and 
+           displays the Long date format.-->
+
+            <DatePicker
+                    x:Name="DataPicker_Calendar"
+                    VerticalAlignment="Center"
+                    Foreground="Red"
+                    SelectedDateFormat="Short" 
+                    FirstDayOfWeek="Monday" 
+                    ToolTip="Datum für den Beginn der Berechnung"
+                    SelectedDate="{Binding DateDataPicker}"/>
+        </Grid>
+
+        <!--Urlaub textbox-->
+        <Grid Grid.Row="1"
+              Grid.Column="3">
+            <TextBox 
+                      x:Name="Holiday_textBox"
+                      Height="20"
+                      Width="50"
+                      MaxLength="2"
+                      PreviewTextInput="PreviewOnlyNumber"
+                      VerticalContentAlignment="Center"
+                      HorizontalContentAlignment="Center"
+                      ToolTip="Tage des Urlaubs genommen"
+                      Text="{Binding HolidayTextBox, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
+            </TextBox>
+
+        </Grid>
+
+        <!--Krankentage textbox-->
+        <Grid Grid.Row="1"
+              Grid.Column="4">
+
+            <TextBox  
+                      x:Name="SickDay_textBox"
+                      Height="20"
+                      Width="50"
+                      MaxLength="2"
+                      PreviewTextInput="PreviewOnlyNumber"
+                      VerticalContentAlignment="Center"
+                      HorizontalContentAlignment="Center"
+                      ToolTip="Krankheitsbedingte Fehltage"
+                      Text="{Binding SickDayTextBox, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
+            </TextBox>
+
+        </Grid>
+
+        <!--Feiertag textbox-->
+        <Grid Grid.Row="1"
+              Grid.Column="5">
+
+            <TextBox  
+                      x:Name="PublicHoliday_textBox"
+                      Height="20"
+                      Width="50"
+                      MaxLength="2"
+                      PreviewTextInput="PreviewOnlyNumber"
+                      VerticalContentAlignment="Center"
+                      HorizontalContentAlignment="Center"
+                      ToolTip="Eingetragene Feiertage des jeweiligen Monats"
+                      Text="{Binding PublicDayTextBox, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
+            </TextBox>
+
+        </Grid>
+
+        <Grid Grid.Row="1"
+              Grid.Column="6">
+
+            <ComboBox 
+                      x:Name="Percentual_Combobox"
+                      Height="20"
+                      Width="50"
+                      ToolTip="Prozentsatz der für Homeoffice gewährten Tage"
+                      SelectedValue="{Binding SelectedPercentComboBox, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, Converter={StaticResource IntToComboBoxItemConverter} }">
+
+                <ComboBoxItem Content="10" Tag="10"/>
+                <ComboBoxItem Content="20" Tag="20"/>
+                <ComboBoxItem Content="30" Tag="30"/>
+                <ComboBoxItem Content="40" Tag="40"/>
+                <ComboBoxItem Content="50" Tag="50"/>
+                <ComboBoxItem Content="60" Tag="60"/>
+                <ComboBoxItem Content="80" Tag="80"/>
+                <ComboBoxItem Content="90" Tag="90"/>
+            </ComboBox>
+
+        </Grid>
+
+        <Grid Grid.Row="6"
+              Grid.Column="10">
+
+            <Button
+                x:Name="Submit_Button_2"
+                Height="40"
+                Width="50"
+                Command="{Binding SubmitCommand}"
+                Content="Add"
+                BorderBrush="Black">
+            </Button>
+
+        </Grid>
+
+        <Grid Grid.Row="6"
+              Grid.Column="9">
+
+            <Button
+              x:Name="Delete_Button"
+              Height="40"
+              Width="50"
+              Command="{Binding DeleteCommand}"
+              Content="Delete"
+              BorderBrush="Black">
+            </Button>
+
+        </Grid>
+
+        <!--Werktage Textbox-->
+        <Grid Grid.Row="3"
+              Grid.Column="1"
+              Visibility="Collapsed">
+
+            <TextBox
+                     x:Name="WorkDay_textBox"
+                     Height="20"
+                     Width="50"
+                     MaxLength="2"
+                     PreviewTextInput="PreviewOnlyNumber"
+                     VerticalContentAlignment="Center"
+                     HorizontalContentAlignment="Center"
+                     Text="{Binding WorkdayTextBox, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"
+                     IsReadOnly="True">
+            </TextBox>
+
+        </Grid>
+
+        <!--HomeOffice Textbox-->
+        <Grid Grid.Row="4"
+              Grid.Column="1"
+              Visibility="Collapsed">
+
+            <TextBox
+                x:Name="HomeOffice_textBox"
+                Height="20"
+                Width="50"
+                MaxLength="2"
+                PreviewTextInput="PreviewOnlyNumber"
+                VerticalContentAlignment="Center"
+                HorizontalContentAlignment="Center"
+                Text="{Binding HomeOfficeTextBox, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"
+                IsReadOnly="True">
+            </TextBox>
+
+        </Grid>
+
+        <!--InOffice Textbox-->
+        <Grid Grid.Row="5"
+               Grid.Column="1"
+               Visibility="Collapsed">
+
+            <TextBox
+                x:Name="InOffice_textBox"
+                Height="20"
+                Width="50"
+                MaxLength="2"
+                PreviewTextInput="PreviewOnlyNumber"
+                VerticalContentAlignment="Center"
+                HorizontalContentAlignment="Center"
+                 Text="{Binding DayInOfficeTextBox, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}"
+                IsReadOnly="True">
+            </TextBox>
+
+        </Grid>
+
+
+
+        <!-- Werktag-->
+        <Grid Grid.Row="3"
+              Grid.Column="0"
+              Visibility="Collapsed">
+
+            <Border Background="Green" BorderBrush="Gainsboro" BorderThickness="1">
+                <Label Content="Werktag" 
+                       HorizontalAlignment="Center"
+                       FontSize="12"
+                       VerticalAlignment="Center">
+                </Label>
+            </Border>
+
+        </Grid>
+
+        <!-- HomeOffice-->
+        <Grid Grid.Row="4"
+              Grid.Column="0"
+              Visibility="Collapsed">
+
+            <Border Background="Yellow" BorderBrush="Gainsboro" BorderThickness="1">
+                <Label Content="HomeOffice" 
+                 HorizontalAlignment="Center"
+                 FontSize="12"
+                 VerticalAlignment="Center">
+                </Label>
+            </Border>
+
+        </Grid>
+
+        <!-- InOffice-->
+        <Grid Grid.Row="5"
+              Grid.Column="0"
+              Visibility="Collapsed">
+
+            <Border Background="Orange" BorderBrush="Gainsboro" BorderThickness="1">
+                <Label Content="In Office" 
+                      HorizontalAlignment="Center"
+                      FontSize="12"
+                     VerticalAlignment="Center">
+                </Label>
+            </Border>
+
+        </Grid>
+
+
+        <!--Table-->
+        <Grid Grid.Row="2"
+              Grid.RowSpan="4"
+              Grid.Column="2"
+              Grid.ColumnSpan="7">
+
+            <ListView x:Name="ItemList" 
+                      VerticalAlignment="Top" 
+                      Margin="5,20,5,0" 
+                      Height="180"
+                      ItemsSource="{Binding ItemListTable, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged }"
+                      SelectedItem="{Binding SelectedItemTable}">
+                <ListView.View>
+                    <GridView>
+                        <!--<GridViewColumn Header="Id" Width="60" DisplayMemberBinding="{Binding Id}"/>-->
+                        <!--<GridViewColumn Header="Urlaub Tag" Width="60" DisplayMemberBinding="{Binding Holiday}"/>
+                        <GridViewColumn Header="Kranken Tag" Width="60" DisplayMemberBinding="{Binding SickDay}"/>-->
+                        <!--<GridViewColumn Header="Feiertag" Width="60" DisplayMemberBinding="{Binding PublicHoliday}"/>-->
+                        <GridViewColumn Header="HomeOffice Prozent" Width="120" DisplayMemberBinding="{Binding HomeOfficePercent}"/>
+                        <!--<GridViewColumn Header="Workday" Width="60" DisplayMemberBinding="{Binding Workday}"/>-->
+                        <GridViewColumn Header="Day In HomeOffice" Width="120" DisplayMemberBinding="{Binding DayInHomeOffice}"/>
+                        <GridViewColumn Header="Day In Office" Width="100" DisplayMemberBinding="{Binding DayInOffice}"/>
+                        <GridViewColumn Header="Month" Width="100" DisplayMemberBinding="{Binding Date , StringFormat=dd.MM.yyyy}"/>
+                    </GridView>
+                </ListView.View>
+
+            </ListView>
+
+        </Grid>
+
+    </Grid>
+
+</Window>

@@ -1,0 +1,11 @@
+﻿<Application x:Class="HomeOffice.Calendar.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:HomeOffice.Calendar" 
+             xmlns:converterhelper1="clr-namespace:MVVM.Helper.ConverterHelper"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <converterhelper1:IntToComboBoxItemConverter x:Key="IntToComboBoxItemConverter"/>
+        
+    </Application.Resources>
+</Application>
