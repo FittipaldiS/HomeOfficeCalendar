@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "FEGQyG4kKOU=",
+  "dgSpecHash": "2IJL8dnbdpA=",
   "success": true,
   "projectFilePath": "C:\\Users\\Fitti\\source\\repos\\HomeOffice.Calendar\\HomeOffice.Calendar.csproj",
   "expectedPackageFiles": [
@@ -31,7 +31,6 @@
     "C:\\Users\\Fitti\\.nuget\\packages\\sqlitepclraw.provider.e_sqlite3\\2.1.4\\sqlitepclraw.provider.e_sqlite3.2.1.4.nupkg.sha512",
     "C:\\Users\\Fitti\\.nuget\\packages\\system.codedom\\4.4.0\\system.codedom.4.4.0.nupkg.sha512",
     "C:\\Users\\Fitti\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
-    "C:\\Users\\Fitti\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
     "C:\\Users\\Fitti\\.nuget\\packages\\system.text.encodings.web\\7.0.0\\system.text.encodings.web.7.0.0.nupkg.sha512",
     "C:\\Users\\Fitti\\.nuget\\packages\\system.text.json\\7.0.0\\system.text.json.7.0.0.nupkg.sha512"
   ],
