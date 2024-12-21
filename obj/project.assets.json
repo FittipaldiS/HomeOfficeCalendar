@@ -1309,11 +1309,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Fitti\\source\\repos\\HomeOffice.Calendar\\HomeOffice.Calendar.csproj",
+      "projectUniqueName": "C:\\Users\\Fitti\\source\\repos2025\\HomeOfficeCalendar\\HomeOffice.Calendar.csproj",
       "projectName": "HomeOffice.Calendar",
-      "projectPath": "C:\\Users\\Fitti\\source\\repos\\HomeOffice.Calendar\\HomeOffice.Calendar.csproj",
+      "projectPath": "C:\\Users\\Fitti\\source\\repos2025\\HomeOfficeCalendar\\HomeOffice.Calendar.csproj",
       "packagesPath": "C:\\Users\\Fitti\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Fitti\\source\\repos\\HomeOffice.Calendar\\obj\\",
+      "outputPath": "C:\\Users\\Fitti\\source\\repos2025\\HomeOfficeCalendar\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

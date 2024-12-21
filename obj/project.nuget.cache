@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "2IJL8dnbdpA=",
+  "dgSpecHash": "1xEs1396LUw=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Fitti\\source\\repos\\HomeOffice.Calendar\\HomeOffice.Calendar.csproj",
+  "projectFilePath": "C:\\Users\\Fitti\\source\\repos2025\\HomeOfficeCalendar\\HomeOffice.Calendar.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Fitti\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\Fitti\\.nuget\\packages\\microsoft.data.sqlite.core\\7.0.13\\microsoft.data.sqlite.core.7.0.13.nupkg.sha512",

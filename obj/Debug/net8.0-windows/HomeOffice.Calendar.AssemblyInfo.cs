@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("HomeOffice.Calendar")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9754cfbf8753b369e55adf7cc6c17b4bc4971f49")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+926f691f0e229e1c3830eff18b985e84dbeab770")]
 [assembly: System.Reflection.AssemblyProductAttribute("HomeOffice.Calendar")]
 [assembly: System.Reflection.AssemblyTitleAttribute("HomeOffice.Calendar")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
