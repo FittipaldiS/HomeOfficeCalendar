@@ -4,8 +4,13 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>net8.0-windows</TargetFramework>
     <UseWPF>true</UseWPF>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>HomeOffice.Calendar_TemporaryKey.pfx</AssemblyOriginatorKeyFile>
+    <Password>uG$Cy@@oS%8hghRyUr0G</Password>
+    <PublishTrimmed>false</PublishTrimmed>
+    <DelaySign>False</DelaySign>
   </PropertyGroup>
-
+  
   <ItemGroup>
     <None Remove="favicon.ico" />
   </ItemGroup>
