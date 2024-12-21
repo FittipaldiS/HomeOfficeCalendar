@@ -1,0 +1,15 @@
+# Cartelle e file generati da Visual Studio
+.vs/
+bin/
+obj/
+
+# File temporanei
+*.pfx
+
+# File di configurazione di ClickOnce
+Properties/PublishProfiles/
+
+# Altri file temporanei
+*.user
+*.suo
+*.log
